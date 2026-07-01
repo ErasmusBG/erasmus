@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "home": {
+      "title": "ErasmusLinks | Premium European Mobility Partner Network",
+      "description": "Integrating fragmented local providers into complete mobility solutions for schools, VET, and NGOs across Europe."
+    },
+    "offer": {
+      "title": "Official Mobility Proposal | ErasmusLinks",
+      "description": "Personalized Erasmus+ mobility and integration proposal for St. Mary's Vocational School — Barcelona Hub, Spain."
+    }
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "logoPrefix": "Erasmus",
+    "logoSuffix": "Links",
+    "links": [
+      { "label": "Destinations", "href": "#destinations" },
+      { "label": "For Schools", "href": "#for-schools" },
+      { "label": "For VET", "href": "#for-vet" },
+      { "label": "Quality Framework", "href": "#quality-framework" }
+    ],
+    "cta": "Request Personalized Mobility",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "badge": "Premium European Mobility Partner Network",
+    "titlePrefix": "Erasmus+ Mobilities via an",
+    "titleHighlight": "International Partner Network",
+    "subtitle": "Connecting schools, VET centres, and municipalities with vetted European hosts, premium course providers, and end-to-end mobility logistics—delivered with institutional precision and full Erasmus+ compliance.",
+    "primaryCta": "Request Personalized Mobility",
+    "secondaryCta": "Explore Destinations",
+    "stats": [
+      { "id": "partners", "label": "30+ Partners in Europe" },
+      { "id": "destinations", "label": "8+ Destinations" },
+      { "id": "mobilities", "label": "250+ Successful Mobilities" },
+      { "id": "programmes", "label": "A–Z Turnkey Programmes" }
+    ]
+  },
+  "pillars": {
+    "headingPrefix": "Built for Every Stakeholder in",
+    "headingHighlight": "European Mobility",
+    "subtitle": "A three-pillar framework that unifies schools, host partners, and the wider ecosystem under one premium operational standard.",
+    "items": [
+      {
+        "id": "for-schools",
+        "audience": "For Schools & VET",
+        "title": "Single Point of Contact",
+        "description": "From curated course calendars to host matching and evidence packs. We eliminate administrative friction so your team can focus on learners—not logistics."
+      },
+      {
+        "id": "for-vet",
+        "audience": "For Host Partners",
+        "title": "Standardized Packaging",
+        "description": "Connecting European hosts with verified international groups, handling logistics, sales, and quality frameworks so every partnership scales with confidence."
+      },
+      {
+        "id": "ecosystem",
+        "audience": "For the Ecosystem",
+        "title": "The Mobility Integrator",
+        "description": "Blending job shadowing, structural sector visits, and practical training into a trusted network that delivers coherent outcomes across borders."
+      }
+    ]
+  },
+  "coreServices": {
+    "headingPrefix": "Four Strategic Lines.",
+    "headingHighlight": "One Integrated Delivery.",
+    "subtitle": "Premium mobility services engineered for institutions with EU funding commitments and zero tolerance for operational risk.",
+    "items": [
+      {
+        "title": "Managed Mobility",
+        "description": "Direct end-to-end premium packaging through vetted sub-contractors. One contract, one coordinator, complete accountability from arrival to departure."
+      },
+      {
+        "title": "Course Calendar",
+        "description": "Public fixed dates, small international groups, and guaranteed delivery. Browse ready-made programmes designed for schools and VET centres with EU funding."
+      },
+      {
+        "title": "Job Shadowing Desk",
+        "description": "Premium niche targeting sector visits, professional mentors, and precise learning outcomes. Structured placements aligned to curriculum and competence frameworks."
+      },
+      {
+        "title": "Quality Framework",
+        "description": "Strict compliance matrices, standardized communication, and ready-to-audit documentation packs. Every mobility engineered for Erasmus+ scrutiny."
+      }
+    ]
+  },
+  "destinations": {
+    "headingPrefix": "European Network",
+    "headingHighlight": "Hubs",
+    "subtitle": "Our initial partner network spans seven strategic destinations—each with vetted hosts, course providers, and on-ground coordination teams ready to activate your mobility programme.",
+    "items": [
+      { "name": "Italy", "flag": "🇮🇹" },
+      { "name": "Spain", "flag": "🇪🇸" },
+      { "name": "Malta", "flag": "🇲🇹" },
+      { "name": "Portugal", "flag": "🇵🇹" },
+      { "name": "Cyprus", "flag": "🇨🇾" },
+      { "name": "Estonia", "flag": "🇪🇪" },
+      { "name": "Turkey", "flag": "🇹🇷" }
+    ]
+  },
+  "evidencePack": {
+    "badge": "Trust & Compliance",
+    "headingPrefix": "The Evidence Pack:",
+    "headingHighlight": "Audit-Ready by Design",
+    "paragraph1": "Every ErasmusLinks mobility is built to Erasmus+ Quality Standards from day one. We do not treat documentation as an afterthought—it is embedded into programme design, delivery, and close-out.",
+    "paragraph2": "Each mobility arrives with a structured verification bundle that protects your institution against grant rejection risk. From certificates to auditable invoices, your national agency receives exactly what it expects—nothing missing, nothing ambiguous.",
+    "items": [
+      {
+        "title": "Completion Certificates",
+        "detail": "Official certificates issued per participant, aligned to programme learning outcomes and institutional branding requirements."
+      },
+      {
+        "title": "Europass Mobility Documents",
+        "detail": "Structured Europass records capturing skills acquired, host organisation details, and mobility duration for transparent credential recognition."
+      },
+      {
+        "title": "Attendance & Activity Proofs",
+        "detail": "Timestamped attendance registers, session logs, and photographic evidence packs that satisfy national agency verification protocols."
+      },
+      {
+        "title": "Auditable Financial Records",
+        "detail": "Itemised invoices, budget reconciliation sheets, and grant-aligned cost breakdowns designed to eliminate rejection risk at audit stage."
+      }
+    ]
+  },
+  "leadForm": {
+    "headingPrefix": "Request Custom",
+    "headingHighlight": "Mobility",
+    "subtitle": "Tell us about your organisation and mobility objectives. Our team will architect a bespoke programme blueprint aligned to your EU funding framework and institutional requirements.",
+    "organizationType": "Organization Type",
+    "organizationTypePlaceholder": "Select your organization type",
+    "organizationTypes": {
+      "school": "School",
+      "vet": "VET Provider",
+      "ngo": "NGO",
+      "municipality": "Municipality"
+    },
+    "destinationHub": "Destination Hub",
+    "destinationHubPlaceholder": "Select a destination hub",
+    "groupSize": "Group Size",
+    "groupSizePlaceholder": "e.g. 24",
+    "estimatedBudget": "Estimated Budget (EUR)",
+    "estimatedBudgetPlaceholder": "e.g. €45,000",
+    "contactName": "Contact Name",
+    "contactNamePlaceholder": "Full name",
+    "contactEmail": "Institutional Email",
+    "contactEmailPlaceholder": "name@institution.eu",
+    "contactPhone": "Institutional Phone",
+    "contactPhonePlaceholder": "+49 000 000 0000",
+    "submit": "Initialize Mobility Blueprint"
+  },
+  "productPreview": {
+    "sectionTitle": "The Future of Erasmus+ Mobility Management",
+    "sectionSubtitle": "A next-generation SaaS ecosystem built to digitalize and scale European projects",
+    "tab1_menu": "Smart Search Hub",
+    "tab1_title": "Discover your next destination in seconds",
+    "tab1_desc": "An interactive European map combined with advanced filtering options across educational sectors (School Education, VET, Adult Education). It allows approved schools and coordinators to pinpoint and plan their ideal mobility hub instantly. (References: 2.png, 3.jpg, 4.jpg)",
+    "tab2_menu": "Detailed Curriculums",
+    "tab2_title": "Total transparency over course programs",
+    "tab2_desc": "Zero guesswork. Gain instant visibility into complete day-by-day 7-day timelines, intense training modules, certified hosting partner profiles, and a full breakdown of embedded logistics packages including premium accommodation, airport transfers, and cultural integration events. (References: 5.jpg, 6.jpg)",
+    "tab3_menu": "B2B Partner Network",
+    "tab3_title": "An elite ecosystem for schools and consortia",
+    "tab3_desc": "A dedicated, shared workspace tailored for receiving partners, consortia, and VET institutions. It streamlines bilateral agreement workflows, tracks real-time group allocations, and perfectly aligns hosting capacity with sending requirements across Europe. (References: 1.png, 7.png)",
+    "tab4_menu": "Digital Proposals",
+    "tab4_title": "Automated budget configuration and drafting",
+    "tab4_desc": "Eliminate chaotic spreadsheets and compliance friction. Our smart inquiry generator operates strictly within official Erasmus+ financial funding frameworks and grant rules. Input your group size, dates, and hub destination – the system builds the proposal automatically. (References: 8.png, 9.png)"
+  },
+  "footer": {
+    "copyright": "ErasmusLinks. Premium European Mobility Partner Network.",
+    "tagline": "Erasmus+ Quality Standards · EU Funding Ready"
+  },
+  "offerProposal": {
+    "actionBar": {
+      "print": "Print or Save as PDF",
+      "accept": "Accept & Lock Proposal",
+      "acceptAlert": "Proposal accepted. Our mobility coordination team will contact you within 24 hours to finalize contractual details."
+    },
+    "header": {
+      "badge": "ErasmusLinks · Confidential Proposal",
+      "title": "Official Mobility & Integration Proposal",
+      "subtitle": "Erasmus+ Key Action 1: Learning Mobility of Individuals",
+      "brandTagline": "Premium European Mobility Partner Network"
+    },
+    "meta": [
+      {
+        "label": "Prepared For",
+        "value": "St. Mary's Vocational School",
+        "detail": "VET Development Grant"
+      },
+      {
+        "label": "Target Destination",
+        "value": "Barcelona Hub, Spain",
+        "detail": "Mediterranean Sector Excellence Network"
+      },
+      {
+        "label": "Group Size",
+        "value": "12 Educators / Staff Members",
+        "detail": "Professional development cohort"
+      },
+      {
+        "label": "Date Generated",
+        "value": "June 2026",
+        "detail": "Proposal Ref: EL-2026-BCN-0412"
+      }
+    ],
+    "blueprint": {
+      "headingPrefix": "The Integrated",
+      "headingHighlight": "Blueprint",
+      "subtitle": "A structured 7-day mobility programme designed for maximum pedagogical impact, operational reliability, and full Erasmus+ compliance from arrival to departure.",
+      "timeline": [
+        {
+          "day": "Day 1",
+          "title": "Arrival & Seamless Airport Transfer to Partner Hotel",
+          "description": "Dedicated meet-and-greet at Barcelona-El Prat Airport. Private group transfer to our vetted partner hotel in the city centre. Evening welcome briefing covering programme schedule, safety protocols, and local orientation materials."
+        },
+        {
+          "day": "Day 2",
+          "title": "Structural Visit & Institutional Onboarding at Sector Labs",
+          "description": "Guided institutional visit to partner VET sector laboratories. Introduction to local pedagogical frameworks, competence mapping sessions, and bilateral alignment workshops with host institution leadership."
+        },
+        {
+          "day": "Days 3–5",
+          "title": "Intensive Training Modules (Advanced Pedagogical Frameworks)",
+          "description": "Three full days of structured professional development: dual-learning methodology workshops, digital skills integration labs, assessment design clinics, and peer observation cycles with certified host trainers."
+        },
+        {
+          "day": "Day 6",
+          "title": "Cultural Immersion Program & Networking Dinner",
+          "description": "Curated cultural programme connecting professional learning with local heritage. Guided sector networking dinner with European mobility stakeholders, host educators, and regional VET policy representatives."
+        },
+        {
+          "day": "Day 7",
+          "title": "Certificate Award Ceremony, Final Compliance Package Sign-off & Departure",
+          "description": "Official certificate award ceremony with Europass documentation handover. Final evidence pack review and sign-off. Coordinated group transfer to airport with complete auditable documentation bundle delivered digitally."
+        }
+      ]
+    },
+    "evidence": {
+      "headingPrefix": "Evidence Pack Module —",
+      "headingHighlight": "Compliance Verification",
+      "subtitle": "ErasmusLinks guarantees full Erasmus+ compliance by delivering a complete verification bundle with every mobility. This proposal includes comprehensive audit protection—ensuring your institution faces zero documentation risk at national agency review.",
+      "items": [
+        {
+          "title": "Original Auditable Invoices",
+          "description": "Itemised, grant-aligned financial documentation with VAT breakdowns, supplier verification, and budget reconciliation sheets ready for national agency audit."
+        },
+        {
+          "title": "Europass Mobility Records",
+          "description": "Individual Europass Mobility Documents for all 12 participants, capturing learning outcomes, host organisation credentials, and mobility duration."
+        },
+        {
+          "title": "Official Learning Agreements",
+          "description": "Pre-mobility and post-mobility learning agreements signed by sending institution, host organisation, and participants—fully aligned to Erasmus+ requirements."
+        },
+        {
+          "title": "Verifiable Attendance Logs",
+          "description": "Timestamped daily attendance registers, session activity logs, and photographic evidence packs satisfying verification protocols for grant final reporting."
+        }
+      ]
+    },
+    "pricing": {
+      "headingPrefix": "Commercial Breakdown —",
+      "headingHighlight": "Managed Mobility Premium Pricing",
+      "subtitle": "Transparent, grant-aligned pricing for a fully managed 7-day mobility programme. All costs are structured for Erasmus+ budget categories and national agency reporting requirements.",
+      "table": {
+        "lineItem": "Line Item",
+        "description": "Description",
+        "amount": "Amount"
+      },
+      "rows": [
+        {
+          "item": "Course Fees & Institutional Hosting",
+          "description": "Professional development modules, host institution access, certified trainers, and learning materials",
+          "amount": "€18,600.00"
+        },
+        {
+          "item": "Premium Logistics (Hotels, Transfers, Group Support)",
+          "description": "7-night partner hotel accommodation, airport transfers, daily local transport, on-ground coordinator, and cultural programme",
+          "amount": "€14,400.00"
+        },
+        {
+          "item": "ErasmusLinks Quality & Compliance Management",
+          "description": "Evidence pack assembly, Europass processing, learning agreement coordination, and audit-ready documentation",
+          "amount": "€3,200.00"
+        }
+      ],
+      "grossTotalLabel": "Total Package Value (Gross Total)",
+      "grossTotal": "€36,200.00",
+      "fundingNote": "100% Eligible for Erasmus+ Grant Funding Cover."
+    },
+    "documentFooter": {
+      "validity": "This proposal is valid for 30 days from the date of generation. ErasmusLinks · Barcelona Hub Operations · proposals@erasmuslinks.com",
+      "confidential": "Document Ref: EL-2026-BCN-0412 · Confidential — For institutional review only"
+    }
+  }
+}

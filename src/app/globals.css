@@ -1,26 +1,203 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@config "../../tailwind.config.ts";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: #0a1128;
+  --color-navy-light: #0b132b;
+  --color-midnight: #060b26;
+  --color-midnight-light: #0b132b;
+  --color-brand-navy: #0a1128;
+  --color-brand-navy-light: #0b132b;
+  --color-brand-gold: #d4af37;
+  --color-brand-gold-bright: #f4d03f;
+  --color-brand-cyan: #0ea5e9;
+  --color-brand-cyan-light: #38bdf8;
+  --color-brand-silver: #94a3b8;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes float-blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
   }
 }
 
+@keyframes dash {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+@utility animate-dash {
+  animation: dash 4s linear infinite;
+}
+
+@utility glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgb(255 255 255 / 0.05);
+  border: 1px solid rgb(255 255 255 / 0.1);
+}
+
+@utility glass-strong {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgb(255 255 255 / 0.08);
+  border: 1px solid rgb(255 255 255 / 0.12);
+}
+
+@utility text-gradient-gold {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-brand-gold-bright),
+    var(--color-brand-gold)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility neon-gold-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+@utility shadow-cyan-glow {
+  box-shadow:
+    0 0 24px rgba(14, 165, 233, 0.12),
+    0 0 48px rgba(56, 189, 248, 0.08);
+}
+
+@utility cosmic-card {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgb(255 255 255 / 0.04);
+  border: 1px solid rgb(255 255 255 / 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(
+    165deg,
+    #060b26 0%,
+    #0a1128 40%,
+    #0b132b 75%,
+    #060b26 100%
+  );
+  background-attachment: fixed;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media print {
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #334155 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #0f172a !important;
+  }
+
+  p {
+    color: #334155 !important;
+  }
+
+  .glass,
+  .glass-strong {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+
+  .text-gradient-gold {
+    background-image: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    color: #0f172a !important;
+  }
+
+  .shadow-gold-glow,
+  .shadow-gold-glow-lg,
+  .neon-gold-glow {
+    box-shadow: none !important;
+  }
+
+  .offer-document {
+    padding-bottom: 0 !important;
+  }
+
+  .offer-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .offer-timeline-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .offer-table-row {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
