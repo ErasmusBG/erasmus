@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import type { Dictionary } from "@/dictionaries/types";
 
 type ProductPreviewDict = Dictionary["productPreview"];
@@ -106,6 +107,21 @@ function TabCategoryBadge({
   );
 }
 
+function CloseIcon() {
+  return (
+    <svg
+      className="h-5 w-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  );
+}
+
 function TabShowcase({
   tab,
   tabIndex,
@@ -114,6 +130,44 @@ function TabShowcase({
 }: ShowcaseProps) {
   const currentImage = tab.images[activeImageIndex] ?? tab.images[0];
   const hasThumbnails = tab.images.length > 1;
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState("");
+  const [isMounted, setIsMounted] = useState(false);
+
+  const openLightbox = (imageSrc: string) => {
+    setLightboxImage(imageSrc);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+  };
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isLightboxOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isLightboxOpen]);
 
   return (
     <div className="cosmic-card relative overflow-hidden rounded-2xl border border-brand-cyan/20 bg-midnight-light/60 p-2 shadow-cyan-glow sm:p-3 md:rounded-3xl md:p-4">
@@ -123,7 +177,12 @@ function TabShowcase({
       />
 
       <div className="relative">
-        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-brand-cyan/25 bg-midnight/80 shadow-cyan-glow">
+        <button
+          type="button"
+          onClick={() => openLightbox(currentImage)}
+          className="group relative aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-2xl border border-brand-cyan/25 bg-midnight/80 shadow-cyan-glow transition-transform duration-300 hover:scale-[1.01]"
+          aria-label={`Expand ${tab.title} preview`}
+        >
           <Image
             key={`${tab.id}-${currentImage}`}
             src={currentImage}
@@ -133,7 +192,11 @@ function TabShowcase({
             className="object-contain object-center p-1 transition-opacity duration-300 sm:p-2"
             priority={tabIndex === 0 && activeImageIndex === 0}
           />
-        </div>
+          <span
+            className="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/[0.04]"
+            aria-hidden="true"
+          />
+        </button>
 
         {hasThumbnails && (
           <div
@@ -174,6 +237,44 @@ function TabShowcase({
           </div>
         )}
       </div>
+
+      {isMounted &&
+        isLightboxOpen &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-50 flex animate-fade-in items-center justify-center bg-slate-950/85 p-4 backdrop-blur-md md:p-8"
+            onClick={closeLightbox}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${tab.title} full screen preview`}
+          >
+            <button
+              type="button"
+              onClick={closeLightbox}
+              className="absolute right-4 top-4 z-10 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 md:right-8 md:top-8"
+              aria-label="Close preview"
+            >
+              <CloseIcon />
+            </button>
+
+            <div
+              className="relative mx-auto w-full max-w-5xl animate-scale-up"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="relative h-[min(85vh,56rem)] w-full overflow-hidden rounded-xl border border-white/10 bg-midnight/40 shadow-2xl">
+                <Image
+                  src={lightboxImage}
+                  alt={`${tab.title} full screen preview`}
+                  fill
+                  sizes="100vw"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 }
